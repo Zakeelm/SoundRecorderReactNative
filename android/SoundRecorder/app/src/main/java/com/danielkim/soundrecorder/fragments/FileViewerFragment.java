@@ -49,6 +49,7 @@ public class FileViewerFragment extends Fragment{
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
 
+
         //newest to oldest order (database stores from oldest to newest)
         llm.setReverseLayout(true);
         llm.setStackFromEnd(true);
