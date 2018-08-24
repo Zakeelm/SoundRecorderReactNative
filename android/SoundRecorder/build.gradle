@@ -30,9 +30,9 @@ allprojects {
 
         }
 
-//        maven {
-//            url '/Users/zakeel/Workspace/DroidConDemo/SoundRecorderRN/node_modules/react-native/android'
-//        }
+        maven {
+            url "$rootDir/../node_modules/react-native/android"
+        }
     }
 
 }
