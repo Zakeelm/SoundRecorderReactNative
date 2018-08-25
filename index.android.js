@@ -1,13 +1,18 @@
 import React from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
 
-class HelloWorld extends React.Component {
+class HelloUser extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.hello}>Hello, World</Text>
+        <Text style={styles.hello}>Hey! How are you?</Text>
       </View>
-    );
+    )
   }
 }
 var styles = StyleSheet.create({
@@ -22,4 +27,4 @@ var styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('MyReactNativeApp', () => HelloWorld);
+AppRegistry.registerComponent('SoundRecorderRN', () => HelloUser);

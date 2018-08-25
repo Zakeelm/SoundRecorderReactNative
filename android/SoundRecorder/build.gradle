@@ -23,6 +23,9 @@ allprojects {
             url 'https://maven.google.com/'
             name 'Google'
         }
+        maven {
+            url "/Users/infinity/Code/SoundRecorderReactNative/node_modules/react-native/android"
+        }
         gradle.projectsEvaluated {
             tasks.withType(JavaCompile) {
                 options.compilerArgs << "-Xlint:deprecation"
@@ -30,9 +33,7 @@ allprojects {
 
         }
 
-        maven {
-            url "$rootDir/../node_modules/react-native/android"
-        }
+
     }
 
 }

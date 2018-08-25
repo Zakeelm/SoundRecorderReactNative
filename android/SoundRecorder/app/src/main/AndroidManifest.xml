@@ -13,17 +13,28 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+        <activity
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name" >
-            <inztent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </inztent-filter>
+            </intent-filter>
         </activity>
         <activity
             android:name=".activities.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/action_settings"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.danielkim.soundrecorder.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ReactActivity"
             android:screenOrientation="portrait"
             android:label="@string/action_settings"
             android:parentActivityName=".activities.MainActivity">
