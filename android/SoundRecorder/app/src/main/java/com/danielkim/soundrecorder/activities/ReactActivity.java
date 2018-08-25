@@ -35,9 +35,38 @@ public class ReactActivity extends Activity implements DefaultHardwareBackBtnHan
         setContentView(mReactRootView);
     }
 
+
+
     @Override
     public void invokeDefaultOnBackPressed() {
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if (mReactInstanceManager != null) {
+            mReactInstanceManager.onHostPause(this);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (mReactInstanceManager != null) {
+            mReactInstanceManager.onHostResume(this, this);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (mReactInstanceManager != null) {
+            mReactInstanceManager.onHostDestroy(this);
+        }
     }
 
     @Override

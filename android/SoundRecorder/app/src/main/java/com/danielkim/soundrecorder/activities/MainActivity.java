@@ -73,10 +73,8 @@ public class MainActivity extends AppCompatActivity{
 
         switch (item.getItemId()) {
             case R.id.action_settings:
-                Intent i = new Intent(this, ReactActivity.class);
+                Intent i = new Intent(this, SettingsActivity.class);
                 startActivity(i);
-//                Intent i = new Intent(this, SettingsActivity.class);
-//                startActivity(i);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

@@ -1,5 +1,6 @@
 package com.danielkim.soundrecorder.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
@@ -9,6 +10,7 @@ import android.support.annotation.Nullable;
 import com.danielkim.soundrecorder.BuildConfig;
 import com.danielkim.soundrecorder.MySharedPreferences;
 import com.danielkim.soundrecorder.R;
+import com.danielkim.soundrecorder.activities.ReactActivity;
 import com.danielkim.soundrecorder.activities.SettingsActivity;
 
 /**
@@ -36,8 +38,10 @@ public class SettingsFragment extends PreferenceFragment {
         aboutPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                LicensesFragment licensesFragment = new LicensesFragment();
-                licensesFragment.show(((SettingsActivity)getActivity()).getSupportFragmentManager().beginTransaction(), "dialog_licenses");
+                Intent i = new Intent(getActivity(), ReactActivity.class);
+                startActivity(i);
+//                LicensesFragment licensesFragment = new LicensesFragment();
+//                licensesFragment.show(((SettingsActivity)getActivity()).getSupportFragmentManager().beginTransaction(), "dialog_licenses");
                 return true;
             }
         });
