@@ -24,7 +24,7 @@ allprojects {
             name 'Google'
         }
         maven {
-            url "$projectDir/../../node_modules/react-native/android"
+            url "$projectDir/../../../node_modules/react-native/android"
         }
         gradle.projectsEvaluated {
             tasks.withType(JavaCompile) {
