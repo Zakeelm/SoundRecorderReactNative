@@ -11,7 +11,7 @@ class HelloUser extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.license}>The MIT License (MIT)
-        Copyright 2014 Oleksandr Melnykov
+        Copyright 2016 Oleksandr Melnykov
 
         Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
