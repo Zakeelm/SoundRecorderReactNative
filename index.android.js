@@ -5,8 +5,11 @@ import {
   Text,
   View
 } from 'react-native';
+import codePush from "react-native-code-push";
 
-class HelloUser extends React.Component {
+@codePush
+class License extends React.Component {
+
   render() {
     return (
       <View style={styles.container}>
@@ -46,4 +49,4 @@ var styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('SoundRecorderRN', () => HelloUser);
+AppRegistry.registerComponent('SoundRecorderRN', () => License);
